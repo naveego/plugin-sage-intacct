@@ -1,0 +1,40 @@
+{
+  "id": "plugin-hubspot",
+  "displayName": "Hubspot",
+  "description": "Plugin for integrating data with Hubspot.com",
+  "apiVersion": "2",
+  "versionDescription": "Version 2",
+  "version": "2.0.0",
+  "iconFile": "icon.jpg",
+  "executable": "PluginHubspot",
+  "kind": "publisher",
+  "os": "$GOOS",
+  "arch": "$GOARCH",
+  "canConfigure": true,
+  "canProduceMultipleSchemas": true,
+  "canAcceptQueryBasedSchemas": false,
+  "canUseOAuth": false,
+  "canWrite": true,
+  "configSchema": {
+    "ui": {
+      "ui:order": [
+        "ApiKey"
+      ],
+      "ApiKey": {
+        "ui:widget": "password"
+      }
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "ApiKey" : {
+          "type": "string",
+          "title": "API Key",
+          "description": "API key to use for authentication."
+        }
+      },
+      "required": [
+      ]
+    }
+  }
+}

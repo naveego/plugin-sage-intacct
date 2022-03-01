@@ -1,0 +1,1 @@
+A plugin for connecting Naveego to your Sage Intacct data.
