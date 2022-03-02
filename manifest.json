@@ -1,12 +1,12 @@
 {
-  "id": "plugin-hubspot",
-  "displayName": "Hubspot",
-  "description": "Plugin for integrating data with Hubspot.com",
+  "id": "plugin-sage-intacct",
+  "displayName": "Sage Intacct",
+  "description": "Plugin for integrating data with Sage Intacct data",
   "apiVersion": "2",
   "versionDescription": "Version 2",
   "version": "2.0.0",
-  "iconFile": "icon.jpg",
-  "executable": "PluginHubspot",
+  "iconFile": "icon.png",
+  "executable": "PluginSageIntacct",
   "kind": "publisher",
   "os": "$GOOS",
   "arch": "$GOARCH",
@@ -18,22 +18,61 @@
   "configSchema": {
     "ui": {
       "ui:order": [
-        "ApiKey"
+        "EndpointUrl",
+        "UserId",
+        "UserPassword",
+        "CompanyId",
+        "SenderId",
+        "SenderPassword"
       ],
-      "ApiKey": {
+      "SenderPassword": {
+        "ui:widget": "password"
+      },
+      "UserPassword": {
         "ui:widget": "password"
       }
     },
     "schema": {
       "type": "object",
       "properties": {
-        "ApiKey" : {
+        "EndpointUrl" : {
           "type": "string",
-          "title": "API Key",
-          "description": "API key to use for authentication."
+          "title": "Endpoint URL",
+          "description": "URL of Intacct API. Use https://api.intacct.com/ia/xml/xmlgw.phtml for cloud hosted service"
+        },
+        "UserId" : {
+          "type": "string",
+          "title": "User ID",
+          "description": "User account with required permissions"
+        },
+        "UserPassword" : {
+          "type": "string",
+          "title": "User Password",
+          "description": "User password for authentication"
+        },
+        "CompanyId" : {
+          "type": "string",
+          "title": "Company ID",
+          "description": "Name of company to connect to"
+        },
+        "SenderId" : {
+          "type": "string",
+          "title": "Sender ID",
+          "description": "Name of your web service user"
+        },
+        "SenderPassword" : {
+          "type": "string",
+          "title": "Sender Password",
+          "description": "Sender ID user password for authentication"
         }
       },
       "required": [
+        "EndpointUrl",
+        "UserId",
+        "UserPassword",
+        "CompanyId",
+        "SenderId",
+        "SenderPassword"
       ]
     }
   }
