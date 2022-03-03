@@ -58,17 +58,9 @@ namespace PluginSageIntacct.API.Utility
         public string Id { get; set; } = "";
         public string Name { get; set; } = "";
         public string LookupObject { get; set; }= "";
-        public string PropertiesPath { get; set; } = "";
-        public string BasePath { get; set; } = "";
-        public string AllPath { get; set; } = "";
-        public string? DetailPath { get; set; }
-        public string? DetailPropertyId { get; set; }
         public string AllQuery { get; set; }
-        public List<string> PropertyKeys { get; set; } = new List<string>();
 
         public virtual bool ShouldGetStaticSchema { get; set; } = false;
-
-        protected virtual string WritePathPropertyId { get; set; } = "hs_unique_creation_key";
 
         public string QueryBody { get; set; } = @"<request>" +
                                                 "<control>" +

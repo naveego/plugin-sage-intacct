@@ -29,29 +29,30 @@ namespace PluginSageIntacct.Helper
         /// <exception cref="Exception"></exception>
         public void Validate()
         {
-            //TODO - ph
-            // if (string.IsNullOrWhiteSpace(ApiKey))
-            // {
-            //     if (String.IsNullOrEmpty(ClientId))
-            //     {
-            //         throw new Exception("the ClientId property must be set");
-            //     }
-            //
-            //     if (String.IsNullOrEmpty(ClientSecret))
-            //     {
-            //         throw new Exception("the ClientSecret property must be set");
-            //     }
-            //
-            //     if (String.IsNullOrEmpty(RefreshToken))
-            //     {
-            //         throw new Exception("the RefreshToken property must be set");
-            //     }
-            //     
-            //     if (String.IsNullOrEmpty(RedirectUri))
-            //     {
-            //         throw new Exception("the RedirectUri property must be set");
-            //     }
-            // }
+            if (String.IsNullOrEmpty(CompanyId))
+            {
+                throw new Exception("the CompanyId property must be set");
+            }
+            if (String.IsNullOrEmpty(UserId))
+            {
+                throw new Exception("the UserId property must be set");
+            }
+            if (String.IsNullOrEmpty(UserPassword))
+            {
+                throw new Exception("the UserPassword property must be set");
+            }
+            if (String.IsNullOrEmpty(EndpointUrl))
+            {
+                throw new Exception("the EndpointUrl property must be set");
+            }
+            if (String.IsNullOrEmpty(SenderId))
+            {
+                throw new Exception("the SenderId property must be set");
+            }
+            if (String.IsNullOrEmpty(SenderPassword))
+            {
+                throw new Exception("the SenderPassword property must be set");
+            }
         }
     }
 }

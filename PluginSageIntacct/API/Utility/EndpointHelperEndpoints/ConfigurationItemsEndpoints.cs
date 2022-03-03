@@ -35,18 +35,10 @@ namespace PluginSageIntacct.API.Utility.EndpointHelperEndpoints
                     Id = "AllConfigurationItems",
                     Name = "All ConfigurationItems",
                     LookupObject = "CONFIGURATIONITEMS",
-                    BasePath = "/crm/v3/",
-                    AllPath = "/objects/contacts",
-                    PropertiesPath = "/crm/v3/properties/contacts",
-                    DetailPath = "/objects/contacts/{0}",
-                    DetailPropertyId = "hs_unique_creation_key",
                     SupportedActions = new List<EndpointActions>
                     {
-                        EndpointActions.Get
-                    },
-                    PropertyKeys = new List<string>
-                    {
-                        "hs_unique_creation_key"
+                        EndpointActions.Get,
+                        EndpointActions.Post
                     },
                     AllQuery = 
                     "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +

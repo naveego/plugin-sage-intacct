@@ -271,7 +271,7 @@ namespace PluginSageIntacctTest.Plugin
                 SampleSize = 10,
                 ToRefresh =
                 {
-                    GetTestSchema("ActiveSubscribers")
+                    GetTestSchema("AllCustomers")
                 }
             };
 
