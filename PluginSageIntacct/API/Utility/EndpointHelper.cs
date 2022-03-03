@@ -26,12 +26,12 @@ namespace PluginSageIntacct.API.Utility
         static EndpointHelper()
         {
             CustomersEndpointHelper.CustomersEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
-            InvoicesEndpointHelper.InvoicesEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
-            RecurringInvoicesEndpointHelper.RecurringInvoicesEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
-            ConfigurationItemsEndpointHelper.ConfigurationItemsEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
-            InventoryEndpointHelper.InventoryEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
-            ItemsEndpointHelper.ItemsEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
-            ContactsEndpointHelper.ContactsEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
+            // InvoicesEndpointHelper.InvoicesEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
+            // RecurringInvoicesEndpointHelper.RecurringInvoicesEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
+            // ConfigurationItemsEndpointHelper.ConfigurationItemsEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
+            // InventoryEndpointHelper.InventoryEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
+            // ItemsEndpointHelper.ItemsEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
+            // ContactsEndpointHelper.ContactsEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
             DepartmentsEndpointHelper.DepartmentsEndpoints.ToList().ForEach(x => Endpoints.TryAdd(x.Key, x.Value));
         }
 

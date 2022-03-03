@@ -210,14 +210,14 @@ namespace PluginSageIntacctTest.Plugin
 
             // assert
             Assert.IsType<DiscoverSchemasResponse>(response);
-            Assert.Equal(1, response.Schemas.Count);
+            Assert.Equal(2, response.Schemas.Count);
             //
             var schema = response.Schemas[0];
             Assert.Equal($"AllCustomers", schema.Id);
             Assert.Equal("All Customers", schema.Name);
             Assert.Equal($"", schema.Query);
             Assert.Equal(10, schema.Sample.Count);
-            Assert.Equal(191, schema.Properties.Count);
+            Assert.Equal(204, schema.Properties.Count);
             //
             // var property = schema.Properties[0];
             // Assert.Equal("field1", property.Id);
